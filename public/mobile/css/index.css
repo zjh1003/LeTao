@@ -41,6 +41,30 @@ a {
   color: #fff;
   float: right;
 }
+/* 底部 */
+.lt_footer {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #b82525;
+}
+.lt_footer > a {
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  padding: 6px 0;
+}
+.lt_footer > a > p {
+  color: #fff;
+  font-size: 12px;
+}
+.lt_footer .active {
+  background-color: #610505;
+}
 /* 主体内容 */
 .lt_main {
   height: 100%;
@@ -117,28 +141,4 @@ a {
 }
 .lt_main .lt_content .woman {
   padding-top: 20px;
-}
-/* 底部 */
-.lt_footer {
-  height: 50px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  background-color: #b82525;
-}
-.lt_footer > a {
-  width: 25%;
-  float: left;
-  text-align: center;
-  color: #fff;
-  padding: 6px 0;
-}
-.lt_footer > a > p {
-  color: #fff;
-  font-size: 12px;
-}
-.lt_footer .active {
-  background-color: #610505;
 }
