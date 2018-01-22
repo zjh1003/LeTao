@@ -28,8 +28,8 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
-console.log("小乖乖,老师代码-前台网址-请在你的浏览器打开以下网址:http://127.0.0.1:"+port+"/mobile");
-console.log("小乖乖,老师代码-后台网址-请在你的浏览器打开以下网址:http://127.0.0.1:"+port+"/admin");
+console.log("前台网址-请在你的浏览器打开以下网址:http://127.0.0.1:"+port+"/mobile");
+console.log("后台网址-请在你的浏览器打开以下网址:http://127.0.0.1:"+port+"/admin");
 /**
  * Normalize a port into a number, string, or false.
  */

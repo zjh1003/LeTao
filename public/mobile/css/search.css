@@ -109,3 +109,10 @@ a {
 .lt_main .lt_history .history_msg .msg_tool > a > span {
   font-size: 14px;
 }
+.lt_main .lt_history .history_msg ul li {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.lt_main .lt_history .history_msg ul li .removeItem {
+  float: right;
+}
