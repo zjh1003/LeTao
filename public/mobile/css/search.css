@@ -112,7 +112,11 @@ a {
 .lt_main .lt_history .history_msg ul li {
   border: 1px solid #ccc;
   padding: 2px;
+  border-bottom: none;
 }
 .lt_main .lt_history .history_msg ul li .removeItem {
   float: right;
+}
+.lt_main .lt_history .history_msg ul li:last-child {
+  border-bottom: 1px solid #ccc;
 }
