@@ -65,3 +65,46 @@ a {
 .lt_footer .active {
   background-color: #610505;
 }
+body {
+  background-color: #fff;
+}
+/* 头部 */
+.lt_header a {
+  float: left;
+}
+/* 主体部分 */
+.lt_main .lt_search {
+  padding: 10px;
+}
+.lt_main .lt_search form {
+  border: 1px solid #b82525;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.lt_main .lt_search form .searchTxt {
+  width: 85%;
+  float: left;
+  height: 28px;
+  border: none;
+  border-radius: 0;
+}
+.lt_main .lt_search form .searchBtn {
+  width: 15%;
+  float: left;
+  height: 28px;
+  border: none;
+  background-color: #b82525;
+  color: #fff;
+  border-radius: 0;
+}
+.lt_main .condition {
+  background-color: #efeff4;
+  padding: 5px 0;
+}
+.lt_main .condition > a {
+  width: 25%;
+  font-size: 12px;
+  float: left;
+  text-align: center;
+}
