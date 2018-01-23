@@ -65,16 +65,18 @@ a {
 .lt_footer .active {
   background-color: #610505;
 }
-body {
-  background-color: #fff;
-}
 /* 头部 */
 .lt_header a {
   float: left;
 }
 /* 主体部分 */
+.lt_main {
+  position: relative;
+  height: 100%;
+}
 .lt_main .lt_search {
   padding: 10px;
+  background-color: #fff;
 }
 .lt_main .lt_search form {
   border: 1px solid #b82525;
@@ -107,4 +109,34 @@ body {
   font-size: 12px;
   float: left;
   text-align: center;
+}
+.lt_main .lt_goods {
+  background-color: #fff;
+}
+.lt_main .lt_goods ul li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 3px;
+}
+.lt_main .lt_goods ul li a {
+  display: inline-block;
+  border: 1px solid #999;
+  padding-bottom: 3px;
+}
+.lt_main .lt_goods ul li a p {
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.lt_main .lt_goods ul li a button {
+  padding: 3px 10px;
+}
+.lt_main .lt_goods ul li a .new_price {
+  font-size: 12px;
+  color: #b82525;
+}
+.lt_main .lt_goods ul li a .old_price {
+  font-size: 12px;
+  text-decoration: line-through;
 }
