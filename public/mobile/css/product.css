@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+/* 头部 */
+.lt_header {
+  width: 100%;
+  height: 45px;
+  background-color: #b82525;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  padding: 15px;
+  z-index: 100;
+}
+.lt_header > span {
+  color: #fff;
+}
+.lt_header > a {
+  color: #fff;
+  float: right;
+}
+/* 底部 */
+.lt_footer {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #b82525;
+}
+.lt_footer > a {
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  padding: 6px 0;
+}
+.lt_footer > a > p {
+  color: #fff;
+  font-size: 12px;
+}
+.lt_footer .active {
+  background-color: #610505;
+}
+.lt_header a {
+  float: left;
+}
+.lt_header .icon_home {
+  float: right;
+}
+.lt_main {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+}
+.lt_main .goods_title {
+  font-size: 18px;
+  background-color: #fff;
+  padding: 0 5px 10px 5px;
+}
+.lt_main .goods_price {
+  background-color: #fff;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+}
+.lt_main .goods_price .rem {
+  color: #ea543d;
+  font-size: 24px;
+  font-weight: 600;
+}
+.lt_main .goods_price .old_price {
+  color: #666;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+.lt_main .goods_size {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 5px 0 15px 0;
+}
+.lt_main .goods_size > span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 28px;
+  margin: 2px;
+}
+.lt_main .goods_count {
+  font-size: 14px;
+  padding: 10px 5px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.lt_main .goods_count .mui-numbox {
+  width: 100px;
+  padding: 0;
+  height: 30px;
+}
+.lt_main .goods_count .mui-numbox .mui-numbox-btn-minus {
+  width: 30px;
+  height: 30px;
+  border-right: 1px solid #ccc;
+}
+.lt_main .goods_count .mui-numbox .mui-numbox-input {
+  width: 30px;
+  height: 30px;
+}
+.lt_main .goods_count .mui-numbox .mui-numbox-btn-plus {
+  width: 30px;
+  height: 30px;
+  border-left: 1px solid #ccc;
+}
+.lt_footer {
+  padding-left: 20%;
+}
+.lt_footer .btn_cart {
+  position: absolute;
+  top: 11px;
+  left: -17px;
+}
+.lt_footer .add {
+  padding: 10px;
+}
+.lt_footer .add .add_cart {
+  width: 48%;
+  text-align: center;
+  float: left;
+  color: #fff;
+  background: #f7b354;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.lt_footer .add .buy {
+  width: 48%;
+  text-align: center;
+  float: right;
+  color: #fff;
+  background: #1da048;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+}

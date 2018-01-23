@@ -86,7 +86,7 @@ $(function () {
                     contentrefresh: "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
                     contentnomore: '没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
                     callback: function () {
-                       
+
                         if (QueryObj.page >= totalPages) {
                             //如果没有更多的数据传入,显示没有更多的数据了
                             mui('#refreshContainer').pullRefresh().endPullupToRefresh(true);
@@ -106,44 +106,44 @@ $(function () {
             }
         });
 
-  //点击搜索,重新加载
-  $(".searchBtn").on("tap", function () {
-    var txt = $(".searchTxt").val();
-    // console.log(txt);
-    QueryObj.proName = txt;
-    // 手动启用刷新组件
-    mui("#refreshContainer").pullRefresh().pulldownLoading();
-})
+        //点击搜索,重新加载
+        $(".searchBtn").on("tap", function () {
+            var txt = $(".searchTxt").val();
+            // console.log(txt);
+            QueryObj.proName = txt;
+            // 手动启用刷新组件
+            mui("#refreshContainer").pullRefresh().pulldownLoading();
+        })
 
-//点击根据条件筛选,价格销量
-$(".condition > a").on("tap", function (e) {
-    // console.log(e.target);
-    var aDom = e.target;
+        //点击根据条件筛选,价格销量
+        $(".condition > a").on("tap", function (e) {
+            // console.log(e.target);
+            var aDom = e.target;
 
-    var sortName = aDom.dataset.sort;
-    // console.log(sort);
+            var sortName = aDom.dataset.sort;
+            // console.log(sort);
 
-    //切换字体图标
-    $(aDom).find(".fa").toggleClass("fa-angle-down fa-angle-up")
+            //切换字体图标
+            $(aDom).find(".fa").toggleClass("fa-angle-down fa-angle-up")
 
-    //升序,降序
-    var sort = 1;
-    if ($(aDom).find(".fa").hasClass("fa-angle-down")) {
-        sort = 2;
-    } else {
-        sort = 1;
+            //升序,降序
+            var sort = 1;
+            if ($(aDom).find(".fa").hasClass("fa-angle-down")) {
+                sort = 2;
+            } else {
+                sort = 1;
+            }
+
+
+            QueryObj.num = "";
+            QueryObj.price = "";
+            QueryObj[sortName] = sort;
+            // 手动启用刷新组件
+            mui("#refreshContainer").pullRefresh().pulldownLoading();
+        })
     }
 
 
-    QueryObj.num = "";
-    QueryObj.price = "";
-    QueryObj[sortName] = sort;
-    // 手动启用刷新组件
-    mui("#refreshContainer").pullRefresh().pulldownLoading();
-})
-    }
-
-  
 
     // queryProduct();
     //从后台获取数据 $.get("url","请求参数","回调函数")
@@ -163,6 +163,13 @@ $(".condition > a").on("tap", function (e) {
         })
 
     }
+
+
+    //点击a 标签调到商品详情页面
+    // $(".goodsList").on("tap","a",function(e){
+    //     // console.log(e.target);
+    //     location.href = e.target.href;
+    // })
 
 })
 

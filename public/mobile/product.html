@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘</title>
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./assets/fontAwesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./css/common.css"> -->
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+
+<body>
+
+    <!-- 头部 -->
+    <div class="lt_header">
+        <span>商品详情</span>
+        <a class="fa fa-arrow-left" href="javascript:history.back();"></a>
+        <a class="icon_home fa fa-home" href="index.html"></a>
+    </div>
+
+
+    <!-- 主体内容 -->
+    <div class="lt_main">
+        <!--下拉刷新容器-->
+        <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 轮播图 -->
+                <div class="mui-slider">
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="./images/detail.jpg" />
+                            </a>
+                        </div>
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="./images/product.jpg" />
+                            </a>
+                        </div>
+                        <div class="mui-slider-item">
+                            <a href="#">
+                                <img src="./images/detail.jpg" />
+                            </a>
+                        </div>
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate">
+                            <a href="#">
+                                <img src="./images/product.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 索引器 -->
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+                <!-- 标题 -->
+                <div class="goods_title">
+                    匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮
+                </div>
+                <!-- 价格 -->
+                <div class="goods_price">
+                    价格: <span class="rem">¥499.00</span><span class="old_price">¥999.00</span>
+                </div>
+                <!-- 尺码 -->
+                <div class="goods_size">
+                    尺码: <span>41</span>
+                    <span>42</span>
+                    <span>43</span>
+                    <span>44</span>
+                    <span>45</span>
+                    <span>46</span>
+                    <span>47</span>
+                    <span>48</span>
+                    <span>49</span>
+                    <span>50</span>
+                </div>
+                <!-- 数量 -->
+                <div class="goods_count">
+                    数量: 
+                    <div class="mui-numbox" data-numbox-min="1">
+                        <!-- "-"按钮，点击可减小当前数值 -->
+                        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                        <input class="mui-numbox-input" type="number" />
+                        <!-- "+"按钮，点击可增大当前数值 -->
+                        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                      </div>
+                      剩余 : 20 件
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="lt_footer">
+        <a class="btn_cart fa fa-shopping-cart" href="javascript:;"></a>
+       <div class="add mui-clearfix">
+        <a class="add_cart" href="javascript:;">加入购物车</a>
+        <a class="buy" href="javascript:;">立即购买</a>
+       </div>
+    </div>
+
+</body>
+
+<script src="./assets/mui/js/mui.min.js"></script>
+<script src="./assets/zepto/zepto.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product.js"></script>
+
+</html>
