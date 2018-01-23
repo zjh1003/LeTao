@@ -14,7 +14,8 @@ $(function () {
 
             //判断输入的是不是空字符
             if (!$.trim(txt)) {
-                console.log("空字符");
+                // console.log("空字符");
+                mui.toast('请输入有效字符') 
                 return;
             }
 

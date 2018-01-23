@@ -50,6 +50,8 @@ $(function () {
         size: "4"
     };
 
+    var totalPages = 1;//总页数
+
     init();
 
     //下拉刷新,上拉加载
@@ -64,6 +66,7 @@ $(function () {
                     contentover: "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
                     contentrefresh: "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
                     callback: function () {
+                        QueryObj.page = 1;
                         //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
                         queryProduct(function (res) {
 
@@ -71,12 +74,10 @@ $(function () {
                             $(".goodsList").html(html);
                             //结束下拉刷新
                             mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+
+                            //重置
+                            mui('#refreshContainer').pullRefresh().refresh(true);
                         });
-
-                        setTimeout(function () {
-                            mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
-                        }, 1000)
-
                     }
                 },
                 up: {
@@ -85,53 +86,64 @@ $(function () {
                     contentrefresh: "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
                     contentnomore: '没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
                     callback: function () {
-                        //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
-                        setTimeout(function () {
-                            mui('#refreshContainer').pullRefresh().endPullupToRefresh();
-                        }, 1000)
+                       
+                        if (QueryObj.page >= totalPages) {
+                            //如果没有更多的数据传入,显示没有更多的数据了
+                            mui('#refreshContainer').pullRefresh().endPullupToRefresh(true);
+                            return;
+                        } else {
+                            QueryObj.page++;
+                            queryProduct(function (res) {
+                                var html = template("mt", res);
+                                $(".goodsList").append(html);
 
+                                mui('#refreshContainer').pullRefresh().endPullupToRefresh();
+                            })
+                        }
 
                     }
                 }
             }
         });
+
+  //点击搜索,重新加载
+  $(".searchBtn").on("tap", function () {
+    var txt = $(".searchTxt").val();
+    // console.log(txt);
+    QueryObj.proName = txt;
+    // 手动启用刷新组件
+    mui("#refreshContainer").pullRefresh().pulldownLoading();
+})
+
+//点击根据条件筛选,价格销量
+$(".condition > a").on("tap", function (e) {
+    // console.log(e.target);
+    var aDom = e.target;
+
+    var sortName = aDom.dataset.sort;
+    // console.log(sort);
+
+    //切换字体图标
+    $(aDom).find(".fa").toggleClass("fa-angle-down fa-angle-up")
+
+    //升序,降序
+    var sort = 1;
+    if ($(aDom).find(".fa").hasClass("fa-angle-down")) {
+        sort = 2;
+    } else {
+        sort = 1;
     }
 
-    //点击搜索,重新加载
-    $(".searchBtn").on("tap", function () {
-        var txt = $(".searchTxt").val();
-        // console.log(txt);
-        QueryObj.proName = txt;
-        // 手动启用刷新组件
-        mui("#refreshContainer").pullRefresh().pulldownLoading();
-    })
 
-    //点击根据条件筛选,价格销量
-    $(".condition > a").on("tap",function(e){
-        // console.log(e.target);
-        var aDom = e.target;
-        
-        var sortName = aDom.dataset.sort;
-        // console.log(sort);
+    QueryObj.num = "";
+    QueryObj.price = "";
+    QueryObj[sortName] = sort;
+    // 手动启用刷新组件
+    mui("#refreshContainer").pullRefresh().pulldownLoading();
+})
+    }
 
-        //切换字体图标
-        $(aDom).find(".fa").toggleClass("fa-angle-down fa-angle-up")
-        
-        //升序,降序
-        var sort = 1;
-        if( $(aDom).find(".fa").hasClass("fa-angle-down")){
-            sort = 2;
-        }else{
-            sort = 1;
-        }
-
-
-        QueryObj.num = "";
-        QueryObj.price = "";
-        QueryObj[sortName] = sort;
-         // 手动启用刷新组件
-         mui("#refreshContainer").pullRefresh().pulldownLoading();
-    })
+  
 
     // queryProduct();
     //从后台获取数据 $.get("url","请求参数","回调函数")
@@ -142,6 +154,12 @@ $(function () {
             console.log(res);
 
             callback && callback(res);
+
+            //计算总页数
+            // var totalSize = res.count;
+            totalPages = Math.ceil(res.count / QueryObj.size);
+            // console.log(totalPages);
+
         })
 
     }
