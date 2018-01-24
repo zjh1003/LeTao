@@ -18,14 +18,21 @@ $(function(){
     4 发送请求ajax
     5 成功之后 开启定时器 
     6 定时器到了之后 清楚定时器  */
+
+    // $(".check").on("tap",function(){
+    //    如果选中length等于0 否则length等于1
+    //     console.log($(".check:checked"));
+    // })
+   
     
+    // 点击注册
     $(".register_btn").on("tap",function(){
 
         var userName = $(".username").val();
         var pwd = $(".password1").val();
         var pwd_sure =  $(".password2").val();
         var code = $(".code_txt").val();
-        // var isCheck = 
+         var isChecked = $(".check:checked");
 
         //判断手机
         if(!checkPhone(userName)){
@@ -51,11 +58,76 @@ $(function(){
             return;
         }
 
+        //服务协议
+        if(isChecked.length<1){
+            mui.toast("需要同意服务协议");
+            return;
+        }
+
+        var registerData = {
+            username : userName,
+            password : pwd,
+            mobile : userName,
+            vCode : code
+        }
+
+        // console.log(registerData);
+        $.post("/user/register",registerData,function(res){
+            // console.log(res);
+            if(res.error&&res.error==401){
+                mui.confirm("注册失败","提示",["确定"],function(a){
+                    // console.log(a);
+                    //注册失败
+                })
+            }else{
+                mui.confirm("是否登录","注册成功",["是","否"],function(a){
+                    if(a.index==0){
+                        location.href = "../user/login.html"
+                    }else{
+                        //不登录
+                    }
+                })
+            }
+            
+        })
+
     })
 
+    //获取验证码 
+    $(".get_code_btn").on("tap",function(){
+
+        //判断是否可点击
+        if($(this).hasClass("btn_disabled")){
+            return;
+        }
+         //点击之后,按钮不可点击,进入倒计时
+         $(this).addClass("btn_disabled");
+
+         $(this).html("正在发送");
+        var that = this;
+        $.get("/user/vCode",function(res){
+            console.log(res);
+            var time = 60;
+            var timer = setInterval(function(){
+                time--;
+                $(that).html(""+ time +"秒后再获取");
+                if(time<0){
+                    clearInterval(timer);
+                    $(that).removeClass("btn_disabled");
+                    $(that).html("获取验证码");
+                }
+            },1000)
+        })
        
+      
+      
+        
+    })
 
-
+    //立即登录
+    $(".login_now").on("tap",function(){
+        location.href = "../user/login.html";
+    })
 
     }
 
