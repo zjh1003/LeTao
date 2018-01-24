@@ -47,7 +47,7 @@ $(function () {
         price: "",
         num: "",
         page: "1",
-        size: "4"
+        pageSize: "4"
     };
 
     var totalPages = 1;//总页数
@@ -157,7 +157,7 @@ $(function () {
 
             //计算总页数
             // var totalSize = res.count;
-            totalPages = Math.ceil(res.count / QueryObj.size);
+            totalPages = Math.ceil(res.count / QueryObj.pageSize);
             // console.log(totalPages);
 
         })

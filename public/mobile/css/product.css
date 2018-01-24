@@ -112,6 +112,10 @@ a {
   line-height: 28px;
   margin: 2px;
 }
+.lt_main .goods_size .active {
+  background-color: #ea543d;
+  color: #fff;
+}
 .lt_main .goods_count {
   font-size: 14px;
   padding: 10px 5px;
