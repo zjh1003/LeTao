@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+/* 头部 */
+.lt_header {
+  width: 100%;
+  height: 45px;
+  background-color: #b82525;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  padding: 15px;
+  z-index: 100;
+}
+.lt_header > span {
+  color: #fff;
+}
+.lt_header > a {
+  color: #fff;
+  float: right;
+}
+/* 底部 */
+.lt_footer {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #b82525;
+}
+.lt_footer > a {
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  padding: 6px 0;
+}
+.lt_footer > a > p {
+  color: #fff;
+  font-size: 12px;
+}
+.lt_footer .active {
+  background-color: #610505;
+}
+.lt_header {
+  padding: 5px 10px;
+}
+.lt_header > a:nth-child(1) {
+  float: left;
+  line-height: 40px;
+}
+.lt_header > a:nth-child(2) {
+  float: right;
+  line-height: 40px;
+}
+.lt_header .searchTxt {
+  width: 85%;
+  height: 35px;
+}
+.lt_main {
+  height: 100%;
+  padding-left: 80px;
+  position: relative;
+}
+.lt_main .lt_main_left {
+  width: 80px;
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lt_main .lt_main_left ul li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.lt_main .lt_mian_right {
+  background-color: #fff;
+  height: 100%;
+  position: relative;
+}
+.lt_main .lt_mian_right > div {
+  padding: 10px;
+}
+.lt_main .lt_mian_right .mui-scroll {
+  height: 100%;
+}
+.lt_main .lt_mian_right ul li {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+}

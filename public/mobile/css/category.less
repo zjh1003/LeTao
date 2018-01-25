@@ -1,0 +1,61 @@
+@import "./common.less";
+
+
+.lt_header{
+    padding: 5px 10px;
+    >a:nth-child(1){
+        float: left;
+        line-height: 40px;
+    }
+    >a:nth-child(2){
+        float: right;
+        line-height: 40px;
+    }
+    .searchTxt{
+        width: 85%;
+        height: 35px;
+    }
+}
+
+.lt_main{
+    height: 100%;
+    padding-left: 80px;
+    position: relative;
+    .lt_main_left{
+        width: 80px;
+        background-color: aqua;
+        position: absolute;
+        top: 0;
+        left: 0;
+        ul{
+            li{
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+    .lt_mian_right{
+        
+        background-color:#fff;
+        height: 100%;
+        position: relative;
+        >div{
+            padding: 10px;
+            
+        }
+        .mui-scroll{
+            height: 100%;
+            // width: 100%;
+        }
+       ul{
+           li{
+               width: 33.33%;
+               float: left;
+               text-align: center;
+               font-size: 12px;
+           }
+       } 
+    }
+}
