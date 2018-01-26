@@ -84,7 +84,7 @@ a {
   width: 100%;
 }
 .lt_main ul li .list_left_pic .listCheck {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .lt_main ul li .list_right_content {
   float: right;
@@ -98,4 +98,70 @@ a {
 }
 .lt_main ul li .list_right_content .number {
   float: right;
+}
+.lt_main ul li:last-child {
+  margin-bottom: 20px;
+}
+.goods_size {
+  font-size: 14px;
+  background-color: #fff;
+  padding: 5px 0 15px 0;
+}
+.goods_size > span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: 28px;
+  margin: 2px;
+}
+.goods_size .active {
+  background-color: #ea543d;
+  color: #fff;
+}
+.goods_count {
+  font-size: 14px;
+  padding: 10px 5px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.goods_count .mui-numbox {
+  width: 100px;
+  padding: 0;
+  height: 30px;
+}
+.goods_count .mui-numbox .mui-numbox-btn-minus {
+  width: 30px;
+  height: 30px;
+  border-right: 1px solid #ccc;
+}
+.goods_count .mui-numbox .mui-numbox-input {
+  width: 30px;
+  height: 30px;
+}
+.goods_count .mui-numbox .mui-numbox-btn-plus {
+  width: 30px;
+  height: 30px;
+  border-left: 1px solid #ccc;
+}
+.cart_order {
+  background-color: #fff;
+  position: absolute;
+  bottom: 50px;
+  z-index: 100;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  font-size: 14px;
+  padding-left: 10px;
+  color: #ff3300;
+  border-top: 1px solid #ccc;
+}
+.cart_order > a {
+  float: right;
+  background-color: #ff3300;
+  color: #fff;
+  padding: 0 5px;
 }
