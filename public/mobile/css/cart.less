@@ -1,0 +1,42 @@
+@import "./common.less"; 
+
+.lt_header{
+    .icon_back{
+        float: left;
+    }
+}
+
+.lt_main{
+    position: relative;
+    height: 100%;
+    
+    ul{
+        li{
+            padding: 10px;
+            .list_left_pic{
+                width: 20%;
+                float: left;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+                .listCheck{
+                    margin-top: 20px;
+                }
+            }
+            .list_right_content{
+                float: right;
+                width: 78%;
+                .new_price{
+                    color: #ff0000;
+                }
+                .old_price{
+                    text-decoration: line-through;
+                }
+                .number{
+                    float: right;
+                }
+            }
+        }
+    }
+}
