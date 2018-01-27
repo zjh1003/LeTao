@@ -1,0 +1,11 @@
+.bg_login {
+  background-color: #222d32;
+}
+.bg_login .container .panel {
+  width: 350px;
+  position: absolute;
+  top: 100px;
+}
+.bg_login .container .panel .btn_login {
+  margin-left: 75px;
+}
