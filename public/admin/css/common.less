@@ -1,0 +1,92 @@
+ *{
+     margin: 0;
+     padding: 0;
+ }
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.lt_main{
+    // width: 100%;
+    height: 100%;
+    padding-left: 180px;
+    .lt_aside{
+        width: 180px;
+        height: 100%;
+        background-color: #222d32;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .lt_logo{
+            height: 50px;
+            background-color: #367fa9;
+            text-align: center;
+            line-height: 50px;
+            a{
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        .lt_personal_msg{
+            font-size: 14px;
+            color: #fff;
+            padding: 20px;
+            img{
+                width: 50px;
+                border-radius: 50%;
+            }
+        }
+        .lt_menu{
+            padding: 30px;
+            li{
+                padding-bottom: 15px;
+                list-style: none;
+                a{
+                    color: #aaaaaa;
+                    text-decoration: none;
+                }
+                .second_menu{
+                    padding-left: 17px;
+                    display: none;
+                    >a{
+                        display: block;
+                        padding-top: 10px;
+                    }
+                }
+                
+            }
+        }
+    }
+    .lt_container{
+        height: 100%;
+        // background-color: aquamarine;
+        .lt_nav{
+            height: 50px;
+            background-color: #3c8dbc;
+            .toggleAside{
+                float: left;
+                color: #fff;
+                font-size: 20px;
+                padding: 13px;
+            }
+            .lt_logout{
+                float: right;
+                color: #fff;
+                font-size: 20px;
+                padding: 13px;
+            }
+        }
+        .lt_small_nav{
+            padding: 15px 10px;
+        }
+        
+    }
+}
+
+.aside_show{
+    padding-left: 0;
+    .lt_aside{
+        display: none;
+    }
+}

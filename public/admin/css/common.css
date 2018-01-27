@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.lt_main {
+  height: 100%;
+  padding-left: 180px;
+}
+.lt_main .lt_aside {
+  width: 180px;
+  height: 100%;
+  background-color: #222d32;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lt_main .lt_aside .lt_logo {
+  height: 50px;
+  background-color: #367fa9;
+  text-align: center;
+  line-height: 50px;
+}
+.lt_main .lt_aside .lt_logo a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.lt_main .lt_aside .lt_personal_msg {
+  font-size: 14px;
+  color: #fff;
+  padding: 20px;
+}
+.lt_main .lt_aside .lt_personal_msg img {
+  width: 50px;
+  border-radius: 50%;
+}
+.lt_main .lt_aside .lt_menu {
+  padding: 30px;
+}
+.lt_main .lt_aside .lt_menu li {
+  padding-bottom: 15px;
+  list-style: none;
+}
+.lt_main .lt_aside .lt_menu li a {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+.lt_main .lt_aside .lt_menu li .second_menu {
+  padding-left: 17px;
+  display: none;
+}
+.lt_main .lt_aside .lt_menu li .second_menu > a {
+  display: block;
+  padding-top: 10px;
+}
+.lt_main .lt_container {
+  height: 100%;
+}
+.lt_main .lt_container .lt_nav {
+  height: 50px;
+  background-color: #3c8dbc;
+}
+.lt_main .lt_container .lt_nav .toggleAside {
+  float: left;
+  color: #fff;
+  font-size: 20px;
+  padding: 13px;
+}
+.lt_main .lt_container .lt_nav .lt_logout {
+  float: right;
+  color: #fff;
+  font-size: 20px;
+  padding: 13px;
+}
+.lt_main .lt_container .lt_small_nav {
+  padding: 15px 10px;
+}
+.aside_show {
+  padding-left: 0;
+}
+.aside_show .lt_aside {
+  display: none;
+}
