@@ -1,0 +1,14 @@
+.lt_menu .showSecond > a {
+  background-color: #000;
+  border-left: 5px solid #0094ff;
+}
+.lt_container .lt_main_content {
+  padding: 0 15px;
+}
+.lt_container .lt_main_content .lt_table {
+  margin-top: 10px;
+}
+.lt_container .lt_main_content .lt_table tr,
+.lt_container .lt_main_content .lt_table th {
+  text-align: center;
+}
